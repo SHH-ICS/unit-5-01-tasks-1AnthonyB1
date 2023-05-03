@@ -30,9 +30,7 @@ def main():
 
         elif int(z) != sum:
             print("\nIncorrect, try again")
-
     
-
 def main2():
 
     while True:
