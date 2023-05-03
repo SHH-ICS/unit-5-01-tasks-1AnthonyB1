@@ -12,7 +12,6 @@ def main():
     while flag is True:
         print("\nThis is your math problem...")
         print(x,"+",y,"=")
-        print(sum)
 
         z = (input("Your Answer:"))
 
