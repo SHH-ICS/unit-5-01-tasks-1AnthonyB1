@@ -8,28 +8,44 @@ def main():
     x = random.randint(2,100)
     y = random.randint(2,100)
     sum = (x + y)
-    print(sum)
 
     while flag is True:
         print("\nThis is your math problem...")
         print(x,"+",y,"=")
+        print(sum)
 
-        z = int(input("Your Answer:"))
+        z = (input("Your Answer:"))
 
-        if z == sum:
+        if z.isnumeric() is False:
+            print("\nInvalid, must be an Integer")
+        
+        elif int(z) == sum:
             print("\nCorrect Answer!\n")
             flag = False
+            main2()
 
-        elif z == sum:
+        elif int(z) == sum:
             flag = True
             break
-        
-    r = input("Would you like another question?\nYes/No: ")
 
-    capr = str.upper(r)
-    if capr == "YES":
-        main()
-    else:
-        print("\nOk then, Have a good one!\n")
-        exit()
+        elif int(z) != sum:
+            print("\nIncorrect, try again")
+
+    
+
+def main2():
+
+    while True:
+        r = input("Would you like another question?\nYes/No: ")
+
+        capr = str.upper(r)
+        if capr == "YES" or capr == "Y":
+            main()
+        elif capr == "NO" or capr == "N":
+            print("\nOk then, Have a good one!\n")
+            exit()
+        
+        else:
+            print("\nPlease answer with yes or no\n")
+            main2
 main()
